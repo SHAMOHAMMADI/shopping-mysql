@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family : "Vazir";
+  src : local("Vazir"),url(./fonts/Vazir.ttf) format('truetype');
+}
+
+*{
+  box-sizing: border-box;
+  font-family: Vazir;
+  margin: 0;
+  padding: 0;
+}
