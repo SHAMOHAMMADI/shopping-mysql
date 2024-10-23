@@ -5,17 +5,38 @@ import dotenv from "dotenv"
 dotenv.config()
 
 const app = express()
+import cors from "cors"
+
+app.use(cors())
+
+app.use(express.json())
+
+// const corsOption = {
+//     origin: ['http://localhost:8890'],
+//     credentials: true,
+//     methods: ["GET", "POST", "PUT", "DELETE"],
+// }
+// app.use(cors(corsOption));
+
+// app.options("*", cors({ origin: 'http://localhost:5173', optionsSuccessStatus: 200 }));
+
+// app.use(cors({ origin: "http://localhost:5173", optionsSuccessStatus: 200 }));
+
+// const pool = mysql.createPool({
+//     host: process.env.MYSQL_HOST, 
+//     user: process.env.MYSQL_USER,
+//     password: process.env.MYSQL_PASSWORD,
+//     database: process.env.MYSQL_DATABASE
+// }).promise()
 
 const pool = mysql.createPool({
-    host: process.env.MYSQL_HOST, 
-    user: process.env.MYSQL_USER,
-    password: process.env.MYSQL_PASSWORD,
-    database: process.env.MYSQL_DATABASE
+    host: "localhost", 
+    user: "root",
+    password: "foo",
+    database: "newbase"
 }).promise()
 
-
-
-
+// app.use(cors())
 export async function getAllData (){
      const [row]= await pool.query("SELECT * FROM products")
      return row
