@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "proxy":"localhost:8890",
+  "proxy": "localhost:8890",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -12,10 +12,12 @@
   },
   "dependencies": {
     "axios": "^1.7.7",
+    "classnames": "^2.5.1",
     "json-server": "^1.0.0-beta.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.27.0"
+    "react-router-dom": "^6.27.0",
+    "tailwind-hamburgers": "^1.3.5"
   },
   "devDependencies": {
     "@eslint/js": "^9.11.1",

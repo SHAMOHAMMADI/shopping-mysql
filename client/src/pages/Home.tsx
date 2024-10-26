@@ -16,7 +16,10 @@ const [pro , setPro] = useState<TProduct[]>([])
   return (
     <div>
     <Container>
-      <div className="grid grid-cols-3 m-2 ">
+      <div className='flex flex-col justify-center items-center text-center  [&>*]:border [&>*]:w-4/5 [&>*]:mx-6 my-6'>
+
+      <div>slide</div>
+       <div className="  ">
         {pro.map((re)=>(
           <div key={re.id} className="flex flex-col justify-center items-center iteflex-col p-4 m-4 border shadow-inner rounded ">
             <img src={re.image} alt="" className="w-52 " />
@@ -27,6 +30,10 @@ const [pro , setPro] = useState<TProduct[]>([])
           </div>
         ))}
       </div>
+      <div>Articles</div>
+      <div>services</div>
+     
+        </div>
     </Container>
       </div>
   )
