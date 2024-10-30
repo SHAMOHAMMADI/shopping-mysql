@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { TProduct } from "../type/Types";
-import { getProducts } from "../services/api";
 import axios from "axios";
 import Container from "../components/container/Container";
+import Banner from "../components/banner/Banner";
 // import { getProducts } from "../services/api";
 
 function Store() {
@@ -17,6 +17,7 @@ function Store() {
   return (
     <div>
       <Container>
+          <Banner/>
         <div className="grid grid-cols-1 gap-4 my-6 mx-4 md:grid-cols-3 lg:grid-cols-4">
           {data.map((res) => (
             <div

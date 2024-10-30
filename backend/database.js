@@ -38,10 +38,15 @@ const pool = mysql.createPool({
 
 // app.use(cors())
 export async function getAllData (){
-     const [row]= await pool.query("SELECT * FROM products")
-     return row
-
+     const [row] = await pool.query("SELECT * FROM products") 
+     return row 
  }
+
+ export async function getAllProject(){
+    const [row]= await pool.query("SELECT * FROM Projects")
+    return row
+
+}
 
  export async function getData(id){
     const [rows] = await pool.query(`
@@ -51,6 +56,13 @@ export async function getAllData (){
     `,[id])
     return rows 
  }
+
+export const getAllAboutUs = async ()=>{
+    const [rows] = await pool.query(
+        `SELECT * FROM aboutUs`
+    )
+    return rows
+}
 
  export async function createProducts ( title ,
     price ,

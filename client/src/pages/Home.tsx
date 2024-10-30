@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import  { useEffect, useState } from 'react'
 import Container from '../components/container/Container'
 import { TProduct } from '../type/Types'
 import axios from 'axios'

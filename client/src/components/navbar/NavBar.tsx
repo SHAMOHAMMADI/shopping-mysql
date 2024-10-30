@@ -1,17 +1,16 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import Container from "../container/Container";
-import classNames from "classnames";
 
 function NavBar() {
-  const buttonRef = useRef<HTMLButtonElement>({});
+  const buttonRef = useRef<HTMLButtonElement>(null);
 
   const [openMenu, setOpenMenu] = useState(true);
 
-  const handlemenu = () => {
-    setOpenMenu((prev) => !prev);
-    // buttonRef.current.style.display="none"
-  };
+//   const handlemenu = () => {
+//     setOpenMenu((prev) => !prev);
+//     // buttonRef.current.style.display="none"
+//   };
   console.log(openMenu);
   // const [opened, setOpened] = useState(false)
 

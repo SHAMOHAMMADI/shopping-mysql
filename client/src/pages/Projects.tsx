@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import Container from '../components/container/Container'
 import axios from 'axios'
 
@@ -29,7 +29,7 @@ function Projects() {
 
         </div>
         
-      ))}
+       ))}
         </div>
 
       </Container>
