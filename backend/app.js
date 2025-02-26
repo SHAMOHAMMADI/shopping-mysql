@@ -12,6 +12,10 @@ app.use(cors())
 
 const port = 8890
 
+app.get('/4',(req,res)=>{
+    res.send("hello")
+})
+
 
 
 app.get('/products', async (req,res)=>{
